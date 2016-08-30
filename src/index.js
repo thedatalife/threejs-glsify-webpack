@@ -42,7 +42,6 @@ function init() {
         vertexShader,
         fragmentShader
     });
-    // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 
     mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -74,8 +73,6 @@ function animate() {
 }
 
 function render() {
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.01;
     uniforms.u_time.value += 0.05;
     renderer.render(scene, camera);
 }
